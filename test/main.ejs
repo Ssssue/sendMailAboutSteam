@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body style="text-align: center;color: #000;">
+    <h2 style="display: inline;color: #000;">每日一问：宝贝今天玩游戏吗？</h2>
+    <img src="https://pic2.zhimg.com/80/v2-932fd12f7a31d082123536861bb79479_hd.jpg" alt="">
+    <br><br>
+    <h2 style="display: inline;text-align: center;color: #000;">什么？还没有？</h2>
+    <img src="https://pic1.zhimg.com/80/v2-c5cf53bfdf656f45661d85bf204939f4_hd.jpg" alt="">
+    <br><br>
+    <img src="https://pic2.zhimg.com/80/v2-0a867b5161afc7644467b32ae8b0f995_hd.jpg" alt="">
+    <h1 style="text-align: center">
+        <%= title %>
+    </h1>
+    <div style="width:100%; margin: 0 auto;color:#5f5e5e;text-align:center;min-height: 145px;">
+    <% for(var j = 0; j<saleData.length; j++) { %>
+        <div style="margin-right:10px;min-height: 145px;display: inline-block;">
+            <img src='<%= saleData[j].imgUrl %>' alt="">
+            <div style="padding: 10px 15px 15px 15px;background:#3d7493;color: #c7d5e0;font-size: 17px;font-weight: 200;width: 430px;margin:0 auto;">
+                本月热门<br>
+                <% if (saleData[j].discount !== '') { %>
+                    <span style="color: #a4d007;background: #4c6b22;display: inline-block;"><%= saleData[j].discount %></span>
+                <% }  %>
+                <span style="color: #acdbf5;"><%= saleData[j].price %></span><br>
+                <a style="color: #162a35;text-decoration:none;" href=<%= saleData[j].imgHref %> >点击进入剁手</a>
+            </div>
+        </div>
+    <% } %>
+    </div>
+    <br>
+    <h2 style="display: inline;color: #000;">我是不是最好的宝宝\(￣︶￣*\))</h2>
+    <img src="https://pic1.zhimg.com/80/v2-a7d76765697bed72233025c4f75830e0_hd.jpg" alt="">
+    <br><br>
+</body>
+</html>
