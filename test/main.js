@@ -13,8 +13,8 @@ let transporter = nodemailer.createTransport({
     port: 465, // SMTP 端口
     secureConnection: true, // SSL安全链接
     auth: {
-        user: '593405087@qq.com', //账户
-        pass: 'pxgzpinzsnvvbeci',
+        user: 'xxxx@qq.com', //账户
+        pass: 'xxxx', //smtp
     }
 });
 
@@ -54,8 +54,8 @@ const template = ejs.compile(fs.readFileSync(path.resolve(__dirname, 'main.ejs')
 
 
         let mailOptions = {
-            from: '"酥酥大人" <593405087@qq.com>', // 发送者昵称和地址
-            to: 'lzp4ever@gmail.com',
+            from: '"Sue" <xxxx@qq.com>', // 发送者昵称和地址
+            to: 'xxxx@gmail.com',
             subject: '来自宝贝的问候(＾Ｕ＾)ノ~',
             html: html
         };
